@@ -1,7 +1,0 @@
-<html>
-
-<h1> to do list</h1>
-
-<P> 1 </P>
-
-</html>
