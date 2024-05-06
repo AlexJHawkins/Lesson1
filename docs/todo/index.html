@@ -3,7 +3,23 @@
 
 <head>
 
+
   <title>To Do</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <script>
+$(document).ready(function(){
+  $("#addbutton").click(function(){
+   var newtasktext = $("#newtasktextbox").val();
+   
+   $("#todolist").append('<li>' + newtasktext + '</li>');
+   $("#newtasktextbox").val('');
+   
+  });
+  
+});
+</script>
 
 <link rel="stylesheet" href="../style.css">
 
@@ -17,15 +33,22 @@
 <h2 style="color:white;">A white heading</h2>
 
 
+
 <p>My to do list is...</p>
 
 
-<ul>
+
+<ul id="todolist">
   <li>workout 5 days a week</li>
   <li>create website</li>
   <li>create app</li>
-  <li>add image to pages</li>
+  <li>make 3 videos every two days</li>
 </ul>
+
+<label for="newtasktextbox">new task:</label>
+<input type="text" id="newtasktextbox" name="fname">
+
+<button type="button" id="addbutton">add</button>
 
 
 
